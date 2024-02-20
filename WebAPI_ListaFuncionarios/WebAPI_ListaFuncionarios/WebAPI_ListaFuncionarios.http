@@ -1,0 +1,6 @@
+@WebAPI_ListaFuncionarios_HostAddress = http://localhost:5174
+
+GET {{WebAPI_ListaFuncionarios_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
