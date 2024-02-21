@@ -3,9 +3,19 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FrontEndAngular": {
+    "FrontEndListaFuncionarios": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/front-end-angular",
+            "outputPath": "dist/front-end-lista-funcionarios",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -48,13 +58,7 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.development.ts"
-                }
-              ]
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
@@ -63,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "FrontEndAngular:build:production"
+              "buildTarget": "FrontEndListaFuncionarios:build:production"
             },
             "development": {
-              "buildTarget": "FrontEndAngular:build:development"
+              "buildTarget": "FrontEndListaFuncionarios:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "FrontEndAngular:build"
+            "buildTarget": "FrontEndListaFuncionarios:build"
           }
         },
         "test": {
@@ -97,8 +101,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "66fe8562-f80e-46a1-b5dd-c97f513e89dc"
   }
 }
