@@ -20,6 +20,7 @@
     </div>
 
     <div class="input_box">
+        <mat-form-field>
         <mat-label>Departamento:</mat-label>
         <mat-select id="departamento" formControlName="departamento" required>
             <mat-option value="RH">RH</mat-option>
@@ -28,15 +29,18 @@
             <mat-option value="Atendimento">Atendimento</mat-option>
             <mat-option value="Zeladoria">Zeladoria</mat-option>
         </mat-select>
+        </mat-form-field>
     </div>
 
     <div class="input_box">
+        <mat-form-field>
         <mat-label for="">Turno:</mat-label>
         <mat-select id="turno" formControlName="turno" required>
             <mat-option value="Manha">Manhã</mat-option>
             <mat-option value="Tarde">Tarde</mat-option>
             <mat-option value="Noite">Noite</mat-option>
         </mat-select>
+        </mat-form-field>
     </div>
 
     <div class="btn-box">
